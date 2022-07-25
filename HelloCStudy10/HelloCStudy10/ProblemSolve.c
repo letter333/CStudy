@@ -19,11 +19,13 @@ int solution1(int num1, int num2, int num3) {
 
 int solution2(int sec) {
 	if (sec >= 3600) {
-		return printf("secÀÇ °ªÀÌ 3600ÀÌ»ó.\n");
+		printf("secì˜ ê°’ì´ 3600ì´ìƒ.\n");
+		return 0;
+		
 	}
 	int m = sec / 60;
 	int s = sec % 60;
-	printf("%dºĞ %dÃÊ\n", m, s);
+	printf("%dë¶„ %dì´ˆ\n", m, s);
 
 	return s;
 }
@@ -53,7 +55,7 @@ int solution5() {
 	return sum;
 }
 
-// solution5ÀÇ printfÁ¦°Å
+// solution5ì˜ printfì œê±°
 int solution5_1(int num1, int num2) {
 	int sum = 0;
 	for (int i = num1; i <= num2; i++) {
@@ -84,7 +86,7 @@ int solution6(int num1, int num2) {
 	return multiple;
 }
 
-// solution6ÀÇ printfÁ¦°Å
+// solution6ì˜ printfì œê±°
 int solution6_1(int num1, int num2) {
 	int multiple = 1;
 
@@ -103,22 +105,22 @@ int solution6_1(int num1, int num2) {
 
 void solution7(char sign) {
 	int num1, num2;
-	printf("a¿Í bÀÇ °ª : ");
+	printf("aì™€ bì˜ ê°’ : ");
 	scanf_s("%d %d", &num1, &num2);
 	int sum = solution5_1(num1, num2);
 	int multiple = solution6_1(num1, num2);
 	switch (sign)
 	{
 	case '+':
-		printf("%dºÎÅÍ %d±îÁöÀÇ ÇÕ : %d\n", num1, num2, sum);
+		printf("%dë¶€í„° %dê¹Œì§€ì˜ í•© : %d\n", num1, num2, sum);
 		break;
 	case '*':
 	case 'x':
 	case 'X':
-		printf("%dºÎÅÍ %d±îÁöÀÇ °ö : %d\n", num1, num2, multiple);
+		printf("%dë¶€í„° %dê¹Œì§€ì˜ ê³± : %d\n", num1, num2, multiple);
 		break;
 	default:
-		printf("À¯È¿ÇÏÁö ¾ÊÀº ºÎÈ£\n");
+		printf("ìœ íš¨í•˜ì§€ ì•Šì€ ë¶€í˜¸\n");
 		break;
 	}
 }
@@ -154,76 +156,76 @@ int solution10(int num) {
 
 int main() {
 	// 1
-	printf("¹®Á¦ 1\n");
+	printf("ë¬¸ì œ 1\n");
 	int a, b, c;
-	printf("a, b, c ÀÔ·Â : ");
+	printf("a, b, c ì…ë ¥ : ");
 	scanf_s("%d %d %d", &a, &b, &c);
 	int sol1 = solution1(a, b, c);
-	printf("1¹ø : %d\n", sol1);
+	printf("1ë²ˆ : %d\n", sol1);
 
 	// 2
-	printf("¹®Á¦ 2\n");
+	printf("ë¬¸ì œ 2\n");
 	int sec;
-	printf("sec°ª ÀÔ·Â : ");
+	printf("secê°’ ì…ë ¥ : ");
 	scanf_s("%d", &sec);
 	int s = solution2(sec);
-	printf("m = %dÃÊ\n", s);
+	printf("m = %dì´ˆ\n", s);
 
 	// 3
-	printf("¹®Á¦ 3\n");
+	printf("ë¬¸ì œ 3\n");
 	solution3();
 
 	// 4
-	printf("¹®Á¦ 4\n");
+	printf("ë¬¸ì œ 4\n");
 	char font;
 	char display;
-	printf("»ö ÀÔ·Â : ");
+	printf("ìƒ‰ ì…ë ¥ : ");
 	rewind(stdin);
 	display = getchar();
 	rewind(stdin);
-	printf("»ö ÀÔ·Â : ");
+	printf("ìƒ‰ ì…ë ¥ : ");
 	font = getchar();
 	rewind(stdin);
 	solution4(display, font);
 
 	// 5
-	printf("¹®Á¦ 5\n");
-	printf("ÀÔ·Â : ");
+	printf("ë¬¸ì œ 5\n");
+	printf("ì…ë ¥ : ");
 	int sum = solution5();
 	printf("total = %d\n", sum);
 
 	// 6
-	printf("¹®Á¦ 6\n");
-	printf("a, b°ª ÀÔ·Â : ");
+	printf("ë¬¸ì œ 6\n");
+	printf("a, bê°’ ì…ë ¥ : ");
 	rewind(stdin);
 	scanf_s("%d %d", &a, &b);
 	int multiple = solution6(a, b);
 	printf("total = %d\n", multiple);
 
 	// 7
-	printf("¹®Á¦ 7\n");
+	printf("ë¬¸ì œ 7\n");
 	char sign;
-	printf("ºÎÈ£ ÀÔ·Â : ");
+	printf("ë¶€í˜¸ ì…ë ¥ : ");
 	rewind(stdin);
 	scanf_s("%c", &sign, 1);
 	solution7(sign);
 
 	// 8
-	printf("¹®Á¦ 8\n");
+	printf("ë¬¸ì œ 8\n");
 	int n;
-	printf("n°ª ÀÔ·Â : ");
+	printf("nê°’ ì…ë ¥ : ");
 	scanf_s("%d", &n);
 	int result = solution8(n);
-	printf("1ºÎÅÍ %d±îÁöÀÇ °ö(¹İº¹¹®) : %d\n", n, result);
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ ê³±(ë°˜ë³µë¬¸) : %d\n", n, result);
 
 	// 9
-	printf("¹®Á¦ 9\n");
+	printf("ë¬¸ì œ 9\n");
 	result = solution9(n);
-	printf("1ºÎÅÍ %d±îÁöÀÇ °ö(Àç±ÍÇÔ¼ö) : %d\n", n, result);
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ ê³±(ì¬ê·€í•¨ìˆ˜) : %d\n", n, result);
 
 	// 10
-	printf("¹®Á¦ 10\n");
-	printf("n°ª ÀÔ·Â : ");
+	printf("ë¬¸ì œ 10\n");
+	printf("nê°’ ì…ë ¥ : ");
 	scanf_s("%d", &n);
 	result = solution10(n);
 	printf("%d\n", result);
